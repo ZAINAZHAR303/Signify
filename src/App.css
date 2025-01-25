@@ -1,0 +1,28 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.webcam-feed {
+  margin: 1rem auto;
+}
+
+.gesture-output {
+  margin-top: 1rem;
+}
+
+.controls {
+  margin-top: 1rem;
+}
