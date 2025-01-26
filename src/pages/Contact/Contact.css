@@ -1,0 +1,66 @@
+/* Contact.css */
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #228b22; /* Greenery theme */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #228b22; /* Highlight greenery theme */
+  }
+  
+  .send-button {
+    background-color: #228b22; /* Greenery theme */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: #1e7b1e;
+  }
+  
+  .success-message {
+    margin-top: 15px;
+    color: #228b22;
+    font-weight: bold;
+  }
+  

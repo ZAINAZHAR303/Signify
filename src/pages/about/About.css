@@ -1,0 +1,116 @@
+/* Container for the entire page */
+.about-page {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6; /* Light earthy background color */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Ensures it moves down when the navbar is added */
+    top: 0; /* Starts from the top */
+    overflow: auto; /* To prevent content overflow if needed */
+}
+
+/* Flexbox container for the cards */
+.about-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes the layout responsive */
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center; /* Ensures cards are centered */
+}
+
+/* Card styling */
+.card {
+    background-color: #e0e0e0; /* Light gray color for the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row, responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px; /* Increased max-width for larger cards */
+    min-height: 400px; /* Ensure cards have enough height */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect: Exciting scale and shadow */
+.card:hover {
+    transform: scale(1.05); /* Slightly scale the card for excitement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Image with circular border */
+.card-img {
+    width: 180px; /* Larger image size */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image round */
+    border: 3px solid #8e7b5b; /* Earthy brown border */
+    margin-top: 20px;
+}
+
+/* Card content */
+.card-content {
+    padding: 30px; /* Increased padding for larger cards */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Name styling (using h1) */
+.card-content h1.name {
+    font-size: 2.5rem; /* Larger font size for the name */
+    margin-bottom: 10px;
+    color: #4a3c31; /* Earthy dark brown color */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Role styling (using h2) */
+.card-content h2.role {
+    font-size: 2.5rem; /* Even larger font size for the role to make it prominent */
+    color: #5a4735; /* Darker earthy brown color for better contrast */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Makes the role stand out more */
+}
+
+/* Card description */
+.card-content p {
+    font-size: 1.1rem;
+    color: #666;
+    font-family: 'Georgia', serif;
+}
+
+/* Adjust layout for smaller screens */
+@media only screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Take up more width on smaller screens */
+        max-width: 350px;
+        min-height: 350px;
+    }
+
+    .card-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .card-content h1.name {
+        font-size: 2rem;
+    }
+
+    .card-content h2.role {
+        font-size: 2rem; /* Increased role font size on small screens */
+    }
+}
