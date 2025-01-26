@@ -20,7 +20,7 @@ const WebcamFeed = ({ setGesture }) => {
     formData.append("file", dataURItoBlob(imageSrc));
 
     try {
-      const response = await axios.post("https://signify-backend.vercel.app/predict", formData, {
+      const response = await axios.post("http://127.0.0.1:8000/predict", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -44,25 +44,47 @@ const WebcamFeed = ({ setGesture }) => {
   };
 
   return (
-    <div className="webcam-feed">
+    <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg">
       {!isPreview ? (
-        <div>
+        <div className="flex flex-col items-center">
           <Webcam
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             width={400}
             height={300}
+            className="rounded-lg border-2 border-gray-300 mb-4"
           />
-          <button onClick={captureFrame}>Capture Gesture</button>
+          <button
+            onClick={captureFrame}
+            className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300"
+          >
+            Capture Gesture
+          </button>
         </div>
       ) : (
-        <div>
-          <h3>Preview</h3>
-          <img src={imageSrc} alt="Preview" width="400" height="300" />
-          <div>
-            <button onClick={confirmAndSend}>Confirm</button>
-            <button onClick={() => setIsPreview(false)}>Retake</button>
+        <div className="flex flex-col items-center">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Preview</h3>
+          <img
+            src={imageSrc}
+            alt="Preview"
+            className="rounded-lg mb-4"
+            width="400"
+            height="300"
+          />
+          <div className="flex space-x-4">
+            <button
+              onClick={confirmAndSend}
+              className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-all duration-300"
+            >
+              Confirm
+            </button>
+            <button
+              onClick={() => setIsPreview(false)}
+              className="px-6 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition-all duration-300"
+            >
+              Retake
+            </button>
           </div>
         </div>
       )}

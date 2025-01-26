@@ -3,7 +3,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/Footer';
 import WebcamFeed from '../components/WebcamFeed';
 import GestureOutput from '../components/GestureOutput';
-import Controls from '../components/Controls';
+// import Controls from '../components/Controls';
 
 export const Home = () => {
 
@@ -16,7 +16,7 @@ export const Home = () => {
             <main>
                 <WebcamFeed setGesture={setGesture} />
                 <GestureOutput gesture={gesture} textToSpeech={textToSpeech} />
-                <Controls setTextToSpeech={setTextToSpeech} />
+                {/* <Controls setTextToSpeech={setTextToSpeech} /> */}
             </main>
             <Footer />
         </div>

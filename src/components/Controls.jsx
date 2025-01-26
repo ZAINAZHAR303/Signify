@@ -2,7 +2,7 @@ import React from "react";
 
 const Controls = ({ setTextToSpeech }) => {
   return (
-    <div className="controls">
+    <div className="controls hidden">
       <label>
         <input
           type="checkbox"
