@@ -20,7 +20,7 @@ const Header = () => {
           <button className="cta-btn">Get Started</button>
         </div>
         <div className="hero-video">
-          <video src="your-video-url.mp4" autoPlay muted loop></video>
+          <video src="vid.crdownload" autoPlay muted loop></video>
         </div>
       </section>
     </header>
